@@ -17,3 +17,7 @@
 
 ## 6. Express
   - npm install express
+
+## 7. View Engines
+  - EJS
+  - In html, <% %> or <%= value %> <%- include %>works for EJS
