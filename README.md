@@ -27,3 +27,10 @@
   - Logger middleware, Authentication middleware, Parsing JSON.... etc.
   - 3rd party middleware package - ex) morgan - logger
   - static files middleware(express.static)
+
+## 9. MongoDB
+  - Collection -> Table
+  - Document -> Record
+  - MongoDB Atlas
+  - Mongoose: ODM library(object document mapping library)
+  - how to read env files **https://nodejs.dev/en/learn/how-to-read-environment-variables-from-nodejs/
