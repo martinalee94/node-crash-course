@@ -21,3 +21,9 @@
 ## 7. View Engines
   - EJS
   - In html, <% %> or <%= value %> <%- include %>works for EJS
+
+## 8. Middleware
+  - The order of middleware is important
+  - Logger middleware, Authentication middleware, Parsing JSON.... etc.
+  - 3rd party middleware package - ex) morgan - logger
+  - static files middleware(express.static)
