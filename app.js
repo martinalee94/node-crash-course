@@ -46,6 +46,8 @@ app.use((req, res, next) => {
 app.use(express.static('public')); // static file folder
 // logging middleware
 app.use(morgan('dev'));
+// encoding request middleware for req.body
+app.use(express.urlencoded({ extended: true }));
 
 // mongoose and mongo sandbox routes
 /*
@@ -84,6 +86,11 @@ app.get('/about', (req, res) => {
 })
 
 // -------blog routes
+app.get('/blogs/create', (req, res) => {
+    res.render('create', { title: 'Create a new Blog' });
+
+})
+
 app.get('/blogs', (req, res) => {
     Blog.find().sort({ createdAt: -1 }) // descending order
         .then((result) => {
@@ -95,9 +102,37 @@ app.get('/blogs', (req, res) => {
 
 })
 
-app.get('/blogs/create', (req, res) => {
-    res.render('create');
+app.post('/blogs', (req, res) => {
+    const blog = new Blog(req.body);
+    blog.save()
+        .then((result) => {
+            res.redirect('/blogs');
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+})
 
+app.get('/blogs/:id', (req, res) => {
+    const id = req.params.id;
+    Blog.findById(id)
+        .then((result) => {
+            res.render('detail', { blog: result, title: 'Blog Details' });
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+})
+
+app.delete('/blogs/:id', (req, res) => {
+    const id = req.params.id;
+    Blog.findByIdAndDelete(id)
+        .then((result) => {
+            res.json({ redirect: '/blogs' }); // 성공하면 FE에 redirect 경로를 리턴
+        })
+        .catch((err) => {
+            console.log(err);
+        })
 })
 
 // 404
