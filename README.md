@@ -34,3 +34,7 @@
   - MongoDB Atlas
   - Mongoose: ODM library(object document mapping library)
   - how to read env files **https://nodejs.dev/en/learn/how-to-read-environment-variables-from-nodejs/
+
+## 10. Get, Post, Delete Requests
+  - Route parameters(ex. localhost:3000/blogs/:id)
+  - EJS Beautify formatter
