@@ -38,3 +38,8 @@
 ## 10. Get, Post, Delete Requests
   - Route parameters(ex. localhost:3000/blogs/:id)
   - EJS Beautify formatter
+
+## 11. Express router & MVC
+  - Express router
+  - Model, View, Controller -> keeps code more modular and reusable
+  - 
