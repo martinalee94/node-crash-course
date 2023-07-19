@@ -1,9 +1,9 @@
-# Node crash course summary
+# Node crash course
 
-### - Overview
+## - Overview
 - A simple blog page in Nodejs, MongoDB and EJS(Server-side rendering)
   
-### - Screenshots
+## - Screenshots
 #### 1. Homepage(index)
 - This page shows the list of all contents.
 <img width="400" alt="index" src="https://github.com/martinalee94/node-crash-course/assets/39133877/deea15f0-65cc-48cb-858a-a2db89f96bd7">
@@ -19,7 +19,7 @@
 
 ---
 
-### TOC
+## TOC
 #### 1-2. Introduction & Setup
 #### 3. Clients and Servers
   - How to create a server in Node
@@ -61,3 +61,5 @@
 #### 11. Express router & MVC
   - Express router
   - Model, View, Controller -> keeps code more modular and reusable
+
+Youtube : https://youtu.be/zb3Qk8SG5Ms
