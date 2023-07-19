@@ -41,6 +41,10 @@ nav li {
     margin-left: 20px;
 }
 
+nav li a {
+    padding: 0 5px;
+}
+
 nav h1 {
     font-size: 3em;
 }
